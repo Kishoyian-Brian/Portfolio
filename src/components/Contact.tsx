@@ -173,7 +173,7 @@ export default function Contact() {
 
                 <div className="space-y-4">
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/Kishoyian-Brian"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-gray-600 hover:bg-gray-800 transition-all duration-300 group"
@@ -181,12 +181,12 @@ export default function Contact() {
                     <Github size={24} className="text-gray-400 group-hover:text-white transition-colors" />
                     <div>
                       <p className="text-white font-medium">GitHub</p>
-                      <p className="text-gray-400 text-sm">@yourusername</p>
+                      <p className="text-gray-400 text-sm">@Kishoyian-Brian</p>
                     </div>
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://www.linkedin.com/in/brian-mwangi033/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-gray-600 hover:bg-gray-800 transition-all duration-300 group"
@@ -194,18 +194,18 @@ export default function Contact() {
                     <Linkedin size={24} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
                     <div>
                       <p className="text-white font-medium">LinkedIn</p>
-                      <p className="text-gray-400 text-sm">@yourusername</p>
+                      <p className="text-gray-400 text-sm">@brian-mwangi033</p>
                     </div>
                   </a>
 
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:kishoyianbrianmwangi@gmail.com"
                     className="flex items-center gap-4 p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-gray-600 hover:bg-gray-800 transition-all duration-300 group"
                   >
                     <Mail size={24} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
                     <div>
                       <p className="text-white font-medium">Email</p>
-                      <p className="text-gray-400 text-sm">your.email@example.com</p>
+                      <p className="text-gray-400 text-sm">kishoyianbrianmwangi@gmail.com</p>
                     </div>
                   </a>
                 </div>

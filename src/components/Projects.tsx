@@ -5,32 +5,50 @@ import { ExternalLink, Github, Image } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'EduSoma - Learning Management System',
     description:
-      'A full-featured e-commerce platform with product listings, shopping cart, checkout flow, and payment integration. Built with modern best practices and responsive design.',
+      'An innovative Learning Management System that revolutionizes online education. Features multi-role user management, course creation, progress tracking, interactive quizzes, automated certificates, and discussion forums. Built with modern fullstack architecture.',
     image: 'placeholder',
-    tech: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
-    github: 'https://github.com/yourusername/project1',
-    demo: 'https://project1-demo.com',
+    tech: ['Angular', 'NestJS 11.0', 'PostgreSQL', 'Prisma ORM', 'TailwindCSS', 'JWT Auth'],
+    github: 'https://github.com/Kishoyian-Brian/E-Learning',
+    demo: 'https://github.com/Kishoyian-Brian/E-Learning',
   },
   {
-    title: 'Task Management App',
+    title: 'RentCar - Car Rental Management System',
     description:
-      'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Includes authentication and user management.',
+      'A dynamic full-stack car rental management system with role-based access control for admins, agents, and customers. Features car browsing, booking system, profile management, reviews, and real-time notifications.',
     image: 'placeholder',
-    tech: ['React', 'TypeScript', 'Firebase', 'TailwindCSS'],
-    github: 'https://github.com/yourusername/project2',
-    demo: 'https://project2-demo.com',
+    tech: ['Angular', 'NestJS', 'PostgreSQL', 'Prisma ORM', 'JWT Auth', 'Cloudinary'],
+    github: 'https://github.com/Kishoyian-Brian/Rental_Car',
+    demo: 'https://github.com/Kishoyian-Brian/Rental_Car',
   },
   {
-    title: 'Weather Dashboard',
+    title: 'SendIt - Parcel Delivery Management System',
     description:
-      'An interactive weather dashboard that displays current conditions and forecasts. Features location search, favorite locations, and beautiful data visualizations.',
+      'An intelligent parcel delivery management system with real-time tracking, role-based access control, and advanced route optimization. Features interactive maps, live location updates, and multi-role system for admins, drivers, and users.',
     image: 'placeholder',
-    tech: ['React', 'TypeScript', 'REST API', 'Chart.js'],
-    github: 'https://github.com/yourusername/project3',
-    demo: 'https://project3-demo.com',
+    tech: ['Angular', 'NestJS', 'PostgreSQL', 'Prisma', 'WebSockets', 'Leaflet Maps'],
+    github: 'https://github.com/Kishoyian-Brian/Sendit',
+    demo: 'https://github.com/Kishoyian-Brian/Sendit',
   },
+  {
+    title: 'Shopiie E-commerce Platform',
+    description:
+      'A modern full-stack e-commerce platform built with NestJS and Angular. Features product management, shopping cart functionality, checkout flow, payment integration, and responsive design for seamless online shopping experiences.',
+    image: 'placeholder',
+    tech: ['Angular', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Responsive Design'],
+    github: 'https://github.com/Kishoyian-Brian/Shoppie',
+  },
+  {
+    title: 'GreenScape Adventures - Eco-Tourism Website',
+    description:
+      'A stunning, responsive website for an eco-tourism and nature adventure company. Features sustainable tourism experiences, nature activities, interactive galleries, and environmental conservation awareness. Built with pure frontend technologies.',
+    image: 'placeholder',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Font Awesome', 'Vercel'],
+    github: 'https://github.com/Kishoyian-Brian/GreenSCape-Adventure',
+    demo: 'https://green-scape-kappa.vercel.app/',
+  },
+
   {
     title: 'Portfolio CMS',
     description:
@@ -40,24 +58,8 @@ const projects = [
     github: 'https://github.com/yourusername/project4',
     demo: 'https://project4-demo.com',
   },
-  {
-    title: 'Social Media Dashboard',
-    description:
-      'A unified dashboard for managing multiple social media accounts. Features post scheduling, analytics, and engagement tracking across platforms.',
-    image: 'placeholder',
-    tech: ['React', 'TypeScript', 'REST APIs', 'Redux'],
-    github: 'https://github.com/yourusername/project5',
-    demo: 'https://project5-demo.com',
-  },
-  {
-    title: 'Recipe Finder App',
-    description:
-      'A recipe discovery application with advanced search filters, meal planning, and shopping list generation. Integrates with multiple recipe APIs.',
-    image: 'placeholder',
-    tech: ['React', 'TypeScript', 'TailwindCSS', 'REST API'],
-    github: 'https://github.com/yourusername/project6',
-    demo: 'https://project6-demo.com',
-  },
+ 
+  
 ];
 
 export default function Projects() {
