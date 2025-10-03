@@ -59,7 +59,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Junor Software Developer
+              Junior Software Developer
             </motion.h2>
 
             <motion.p
@@ -81,11 +81,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">5+</div>
+                <div className="text-2xl font-bold text-blue-400">3+</div>
                 <div className="text-sm text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">50+</div>
+                <div className="text-2xl font-bold text-purple-400">10+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>
               </div>
               <div className="text-center">
@@ -111,15 +111,17 @@ export default function Hero() {
                 View My Work
               </motion.button>
               
-              <motion.button
-                onClick={scrollToContact}
+              <motion.a
+                href="https://docs.google.com/document/d/1Pq5-4zGUh4vtK3UZVxKNk_PDh4e0WZFZnWgghxals84/edit?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300 flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download size={18} />
-                Get Resume
-              </motion.button>
+                View Resume
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -162,15 +164,48 @@ export default function Hero() {
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <div className="w-full h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4"></div>
+                <div className="w-full h-32 bg-gray-900 rounded-lg mb-4 p-4 flex items-center justify-center">
+                  {/* Simple Fullstack Visualization */}
+                  <div className="flex items-center space-x-3">
+                    {/* Frontend */}
+                    <div className="text-center">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mb-1">
+                        <span className="text-white text-xs font-bold">F</span>
+                      </div>
+                      <span className="text-gray-400 text-[8px]">Frontend</span>
+                    </div>
+                    
+                    {/* Arrow */}
+                    <div className="text-gray-400 text-lg">→</div>
+                    
+                    {/* API */}
+                    <div className="text-center">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mb-1">
+                        <span className="text-white text-xs font-bold">A</span>
+                      </div>
+                      <span className="text-gray-400 text-[8px]">API</span>
+                    </div>
+                    
+                    {/* Arrow */}
+                    <div className="text-gray-400 text-lg">→</div>
+                    
+                    {/* Database */}
+                    <div className="text-center">
+                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mb-1">
+                        <span className="text-white text-xs font-bold">D</span>
+                      </div>
+                      <span className="text-gray-400 text-[8px]">Database</span>
+                    </div>
+                  </div>
+                </div>
                 <h3 className="text-white font-semibold mb-2">Full Stack Solutions</h3>
                 <p className="text-gray-400 text-sm mb-4">
                   Enterprise applications with modern architecture and scalable design patterns.
                 </p>
                 <div className="flex gap-2">
-                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">React</span>
-                  <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">Node.js</span>
-                  <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded">AWS</span>
+                  <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">Angular</span>
+                  <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">NestJS</span>
+                  <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded">PostgreSQL</span>
                 </div>
               </motion.div>
             </div>
