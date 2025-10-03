@@ -26,8 +26,17 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-700">
-                <User size={120} className="text-blue-400" />
+              <div className="relative">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-700 overflow-hidden">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/177422234?v=4"
+                    alt="Brian - Full Stack Developer"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center border-4 border-gray-900">
+                  <User size={24} className="text-white" />
+                </div>
               </div>
             </motion.div>
 

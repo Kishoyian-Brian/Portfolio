@@ -48,16 +48,17 @@ const projects = [
     github: 'https://github.com/Kishoyian-Brian/GreenSCape-Adventure',
     demo: 'https://green-scape-kappa.vercel.app/',
   },
-
   {
-    title: 'Portfolio CMS',
+    title: 'My Portfolio - Modern Developer Portfolio',
     description:
-      'A content management system for portfolio websites with drag-and-drop page builder, media management, and SEO optimization tools. Includes admin dashboard.',
+      'A modern, responsive portfolio website showcasing full-stack development skills and projects. Features smooth animations, professional design, interactive sections, and comprehensive project showcase. Built with React, TypeScript, and Tailwind CSS.',
     image: 'placeholder',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com/yourusername/project4',
-    demo: 'https://project4-demo.com',
+    tech: ['React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Lucide React', 'Vite'],
+    github: 'https://github.com/Kishoyian-Brian/Portfolio',
+    demo: 'https://brian-portfolio-ten-nu.vercel.app/',
   },
+
+
  
   
 ];
