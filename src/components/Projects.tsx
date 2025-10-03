@@ -8,7 +8,7 @@ const projects = [
     title: 'EduSoma - Learning Management System',
     description:
       'An innovative Learning Management System that revolutionizes online education. Features multi-role user management, course creation, progress tracking, interactive quizzes, automated certificates, and discussion forums. Built with modern fullstack architecture.',
-    image: 'placeholder',
+    image: '/E-learning.png',
     tech: ['Angular', 'NestJS 11.0', 'PostgreSQL', 'Prisma ORM', 'TailwindCSS', 'JWT Auth'],
     github: 'https://github.com/Kishoyian-Brian/E-Learning',
     demo: 'https://github.com/Kishoyian-Brian/E-Learning',
@@ -17,7 +17,7 @@ const projects = [
     title: 'RentCar - Car Rental Management System',
     description:
       'A dynamic full-stack car rental management system with role-based access control for admins, agents, and customers. Features car browsing, booking system, profile management, reviews, and real-time notifications.',
-    image: 'placeholder',
+    image: 'Cars.png',
     tech: ['Angular', 'NestJS', 'PostgreSQL', 'Prisma ORM', 'JWT Auth', 'Cloudinary'],
     github: 'https://github.com/Kishoyian-Brian/Rental_Car',
     demo: 'https://github.com/Kishoyian-Brian/Rental_Car',
@@ -26,7 +26,7 @@ const projects = [
     title: 'SendIt - Parcel Delivery Management System',
     description:
       'An intelligent parcel delivery management system with real-time tracking, role-based access control, and advanced route optimization. Features interactive maps, live location updates, and multi-role system for admins, drivers, and users.',
-    image: 'placeholder',
+    image: 'Sendit.png',
     tech: ['Angular', 'NestJS', 'PostgreSQL', 'Prisma', 'WebSockets', 'Leaflet Maps'],
     github: 'https://github.com/Kishoyian-Brian/Sendit',
     demo: 'https://github.com/Kishoyian-Brian/Sendit',
@@ -35,7 +35,7 @@ const projects = [
     title: 'Shopiie E-commerce Platform',
     description:
       'A modern full-stack e-commerce platform built with NestJS and Angular. Features product management, shopping cart functionality, checkout flow, payment integration, and responsive design for seamless online shopping experiences.',
-    image: 'placeholder',
+    image: 'Shoppie.png',
     tech: ['Angular', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Responsive Design'],
     github: 'https://github.com/Kishoyian-Brian/Shoppie',
   },
@@ -43,7 +43,7 @@ const projects = [
     title: 'GreenScape Adventures - Eco-Tourism Website',
     description:
       'A stunning, responsive website for an eco-tourism and nature adventure company. Features sustainable tourism experiences, nature activities, interactive galleries, and environmental conservation awareness. Built with pure frontend technologies.',
-    image: 'placeholder',
+    image: '/greenscape.png',
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Font Awesome', 'Vercel'],
     github: 'https://github.com/Kishoyian-Brian/GreenSCape-Adventure',
     demo: 'https://green-scape-kappa.vercel.app/',
@@ -52,7 +52,7 @@ const projects = [
     title: 'My Portfolio - Modern Developer Portfolio',
     description:
       'A modern, responsive portfolio website showcasing full-stack development skills and projects. Features smooth animations, professional design, interactive sections, and comprehensive project showcase. Built with React, TypeScript, and Tailwind CSS.',
-    image: 'placeholder',
+    image: '/portfolio.png',
     tech: ['React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Lucide React', 'Vite'],
     github: 'https://github.com/Kishoyian-Brian/Portfolio',
     demo: 'https://brian-portfolio-ten-nu.vercel.app/',
@@ -91,7 +91,15 @@ export default function Projects() {
               >
                 <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden h-full flex flex-col hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
                   <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center relative overflow-hidden">
-                    <Image size={64} className="text-gray-600" />
+                    {project.image && project.image !== 'placeholder' ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <Image size={64} className="text-gray-600" />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-transparent"></div>
                   </div>
 
