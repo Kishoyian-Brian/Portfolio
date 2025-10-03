@@ -28,9 +28,6 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with your EmailJS configuration or backend endpoint
-      // Example: await emailjs.send('service_id', 'template_id', formData, 'public_key');
-
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
       setSubmitStatus('success');

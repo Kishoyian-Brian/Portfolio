@@ -18,7 +18,6 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,12 +60,11 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              I specialize in building enterprise-grade applications using modern technologies. 
-              With expertise in React, Node.js, and cloud architecture, I deliver scalable solutions 
-              that drive business growth.
+              I craft dynamic full-stack solutions that bridge the gap between innovative ideas and 
+              production reality. With mastery in Angular, NestJS, and PostgreSQL, I architect robust 
+              applications that scale seamlessly from database to deployment.
             </motion.p>
 
-            {/* Professional Stats */}
             <motion.div
               className="grid grid-cols-3 gap-6 mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -87,7 +85,6 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Action Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
@@ -118,14 +115,12 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual Elements */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            {/* Floating Tech Icons */}
             <div className="relative w-full h-96 flex items-center justify-center">
               <motion.div
                 className="absolute top-8 left-8 w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center"
@@ -151,16 +146,13 @@ export default function Hero() {
                 <Cloud className="text-pink-400" size={32} />
               </motion.div>
 
-              {/* Central Professional Card */}
               <motion.div
                 className="w-64 h-80 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 shadow-2xl"
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <div className="w-full h-32 bg-gray-900 rounded-lg mb-4 p-4 flex items-center justify-center">
-                  {/* Simple Fullstack Visualization */}
                   <div className="flex items-center space-x-3">
-                    {/* Frontend */}
                     <div className="text-center">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mb-1">
                         <span className="text-white text-xs font-bold">F</span>
@@ -168,10 +160,8 @@ export default function Hero() {
                       <span className="text-gray-400 text-[8px]">Frontend</span>
                     </div>
                     
-                    {/* Arrow */}
                     <div className="text-gray-400 text-lg">→</div>
                     
-                    {/* API */}
                     <div className="text-center">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mb-1">
                         <span className="text-white text-xs font-bold">A</span>
@@ -179,10 +169,8 @@ export default function Hero() {
                       <span className="text-gray-400 text-[8px]">API</span>
                     </div>
                     
-                    {/* Arrow */}
                     <div className="text-gray-400 text-lg">→</div>
                     
-                    {/* Database */}
                     <div className="text-center">
                       <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mb-1">
                         <span className="text-white text-xs font-bold">D</span>
