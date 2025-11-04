@@ -1,80 +1,101 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Database, GitBranch, Globe, Layers, Terminal, Server, Cloud, Box } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { SiAngular, SiReact, SiTypescript, SiNodedotjs, SiNestjs, SiPostgresql, SiPrisma, SiPhp, SiSwagger, SiGithub, SiDocker } from 'react-icons/si';
 
-const skills = [
+const skillCategories = [
   {
-    name: 'Angular',
-    icon: Code2,
-    description: 'Enterprise web applications',
-    color: 'from-red-500 to-red-600',
+    title: 'Frontend',
+    skills: [
+      {
+        name: 'Angular',
+        icon: SiAngular,
+        description: 'Enterprise web applications',
+        iconColor: 'text-red-500',
+      },
+      {
+        name: 'React',
+        icon: SiReact,
+        description: 'Building interactive UIs',
+        iconColor: 'text-cyan-400',
+      },
+      {
+        name: 'TypeScript',
+        icon: SiTypescript,
+        description: 'Type-safe development',
+        iconColor: 'text-blue-500',
+      },
+    ],
   },
   {
-    name: 'React',
-    icon: Layers,
-    description: 'Building interactive UIs',
-    color: 'from-cyan-400 to-blue-500',
+    title: 'Backend',
+    skills: [
+      {
+        name: 'Node.js',
+        icon: SiNodedotjs,
+        description: 'Backend development',
+        iconColor: 'text-green-500',
+      },
+      {
+        name: 'NestJS',
+        icon: SiNestjs,
+        description: 'Scalable server-side apps',
+        iconColor: 'text-red-600',
+      },
+      {
+        name: 'PHP',
+        icon: SiPhp,
+        description: 'Server-side scripting',
+        iconColor: 'text-purple-600',
+      },
+    ],
   },
   {
-    name: 'TypeScript',
-    icon: Terminal,
-    description: 'Type-safe development',
-    color: 'from-blue-400 to-blue-600',
+    title: 'Database',
+    skills: [
+      {
+        name: 'PostgreSQL',
+        icon: SiPostgresql,
+        description: 'Relational database',
+        iconColor: 'text-blue-600',
+      },
+      {
+        name: 'Prisma ORM',
+        icon: SiPrisma,
+        description: 'Type-safe database client',
+        iconColor: 'text-indigo-500',
+      },
+    ],
   },
   {
-    name: 'Node.js',
-    icon: Server,
-    description: 'Backend development',
-    color: 'from-green-400 to-emerald-600',
-  },
-  {
-    name: 'NestJS',
-    icon: Server,
-    description: 'Scalable server-side apps',
-    color: 'from-red-400 to-pink-600',
-  },
-  {
-    name: 'PostgreSQL',
-    icon: Database,
-    description: 'Relational database',
-    color: 'from-blue-500 to-blue-700',
-  },
-  {
-    name: 'Prisma ORM',
-    icon: Database,
-    description: 'Type-safe database client',
-    color: 'from-indigo-400 to-purple-600',
-  },
-  {
-    name: 'PHP',
-    icon: Code2,
-    description: 'Server-side scripting',
-    color: 'from-purple-500 to-purple-700',
-  },
-  {
-    name: 'REST APIs',
-    icon: Globe,
-    description: 'API design & integration',
-    color: 'from-orange-400 to-red-500',
-  },
-  {
-    name: 'Git/GitHub',
-    icon: GitBranch,
-    description: 'Version control',
-    color: 'from-gray-400 to-gray-600',
-  },
-  {
-    name: 'Docker',
-    icon: Box,
-    description: 'Containerization',
-    color: 'from-blue-400 to-cyan-500',
-  },
-  {
-    name: 'Deployment',
-    icon: Cloud,
-    description: 'CI/CD & DevOps',
-    color: 'from-teal-400 to-green-500',
+    title: 'Other',
+    skills: [
+      {
+        name: 'REST APIs',
+        icon: SiSwagger,
+        description: 'API design & integration',
+        iconColor: 'text-green-500',
+      },
+      {
+        name: 'Git/GitHub',
+        icon: SiGithub,
+        description: 'Version control',
+        iconColor: 'text-gray-300',
+      },
+      {
+        name: 'Docker',
+        icon: SiDocker,
+        description: 'Containerization',
+        iconColor: 'text-blue-400',
+      },
+      {
+        name: 'Deployment',
+        icon: Cloud,
+        description: 'CI/CD & DevOps',
+        iconColor: 'text-teal-400',
+      },
+    ],
   },
 ];
 
@@ -90,32 +111,46 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             Skills
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {skills.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  className="group"
-                >
-                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 h-full hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-                    <div className={`w-16 h-16 mb-4 bg-gradient-to-br ${skill.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon size={32} className="text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{skill.name}</h3>
-                    <p className="text-gray-400 text-sm">{skill.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skillCategories.map((category, categoryIndex) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 h-full hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">{category.title}</h3>
+                  <div className="space-y-4">
+                    {category.skills.map((skill, skillIndex) => {
+                      const Icon = skill.icon;
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                          transition={{ duration: 0.4, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
+                          className="flex items-center gap-4 p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                        >
+                          <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Icon size={24} className={skill.iconColor} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-lg font-semibold text-white mb-1">{skill.name}</h4>
+                            <p className="text-gray-400 text-xs">{skill.description}</p>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
                   </div>
-                </motion.div>
-              );
-            })}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

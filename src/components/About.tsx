@@ -15,7 +15,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             About Me
           </h2>
 
@@ -27,14 +27,14 @@ export default function About() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-700 overflow-hidden">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 bg-gray-800 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gray-700 overflow-hidden">
                   <img
                     src="https://avatars.githubusercontent.com/u/177422234?v=4"
                     alt="Brian - Full Stack Developer"
                     className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center border-4 border-gray-900">
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center border-4 border-gray-900">
                   <User size={24} className="text-white" />
                 </div>
               </div>

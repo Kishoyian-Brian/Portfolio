@@ -3,6 +3,41 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, Github, Image } from 'lucide-react';
 
+const getTechColor = (tech: string): string => {
+  const techLower = tech.toLowerCase();
+  
+  // Frontend frameworks
+  if (techLower.includes('angular')) return 'bg-red-500/20 text-red-400 border border-red-500/30';
+  if (techLower.includes('react')) return 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30';
+  if (techLower.includes('typescript')) return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
+  if (techLower.includes('javascript')) return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
+  if (techLower.includes('html')) return 'bg-orange-500/20 text-orange-400 border border-orange-500/30';
+  if (techLower.includes('css')) return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
+  if (techLower.includes('tailwind')) return 'bg-teal-500/20 text-teal-400 border border-teal-500/30';
+  
+  // Backend frameworks
+  if (techLower.includes('nestjs')) return 'bg-red-600/20 text-red-500 border border-red-600/30';
+  if (techLower.includes('node')) return 'bg-green-500/20 text-green-400 border border-green-500/30';
+  
+  // Database
+  if (techLower.includes('postgresql') || techLower.includes('postgres')) return 'bg-blue-600/20 text-blue-500 border border-blue-600/30';
+  if (techLower.includes('prisma')) return 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30';
+  
+  // Tools & Services
+  if (techLower.includes('jwt') || techLower.includes('auth')) return 'bg-purple-500/20 text-purple-400 border border-purple-500/30';
+  if (techLower.includes('websocket')) return 'bg-green-500/20 text-green-400 border border-green-500/30';
+  if (techLower.includes('cloudinary')) return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
+  if (techLower.includes('vercel')) return 'bg-gray-400/20 text-gray-300 border border-gray-400/30';
+  if (techLower.includes('framer')) return 'bg-purple-500/20 text-purple-400 border border-purple-500/30';
+  if (techLower.includes('vite')) return 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30';
+  if (techLower.includes('leaflet') || techLower.includes('map')) return 'bg-green-500/20 text-green-400 border border-green-500/30';
+  if (techLower.includes('responsive') || techLower.includes('design')) return 'bg-pink-500/20 text-pink-400 border border-pink-500/30';
+  if (techLower.includes('font awesome')) return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
+  
+  // Default
+  return 'bg-gray-700/50 text-gray-300 border border-gray-600/50';
+};
+
 const projects = [
   {
     title: 'EduSoma - Learning Management System',
@@ -75,7 +110,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             Projects
           </h2>
 
@@ -90,7 +125,7 @@ export default function Projects() {
                 className="group"
               >
                 <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden h-full flex flex-col hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-                  <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-48 bg-gray-700 flex items-center justify-center relative overflow-hidden">
                     {project.image && project.image !== 'placeholder' ? (
                       <img
                         src={project.image}
@@ -100,7 +135,6 @@ export default function Projects() {
                     ) : (
                       <Image size={64} className="text-gray-600" />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-transparent"></div>
                   </div>
 
                   <div className="p-6 flex-1 flex flex-col">
@@ -115,7 +149,7 @@ export default function Projects() {
                         {project.tech.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 text-sm bg-gray-700 text-gray-300 rounded-full"
+                            className={`px-3 py-1 text-sm rounded-full ${getTechColor(tech)}`}
                           >
                             {tech}
                           </span>
@@ -137,7 +171,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg transition-all duration-200"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-200"
                       >
                         <ExternalLink size={18} />
                         <span>Live Demo</span>

@@ -28,7 +28,7 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            className="text-2xl font-bold text-white"
           >
             Brian
           </a>
