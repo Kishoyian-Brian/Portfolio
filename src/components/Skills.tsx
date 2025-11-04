@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Cloud } from 'lucide-react';
-import { SiAngular, SiReact, SiTypescript, SiNodedotjs, SiNestjs, SiPostgresql, SiPrisma, SiPhp, SiSwagger, SiGithub, SiDocker } from 'react-icons/si';
+import { SiAngular, SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiNestjs, SiPostgresql, SiPrisma, SiPhp, SiSwagger, SiGithub, SiDocker, SiSocketdotio } from 'react-icons/si';
 
 const skillCategories = [
   {
@@ -26,6 +26,12 @@ const skillCategories = [
         description: 'Type-safe development',
         iconColor: 'text-blue-500',
       },
+      {
+        name: 'Tailwind CSS',
+        icon: SiTailwindcss,
+        description: 'Utility-first CSS framework',
+        iconColor: 'text-teal-400',
+      },
     ],
   },
   {
@@ -48,6 +54,12 @@ const skillCategories = [
         icon: SiPhp,
         description: 'Server-side scripting',
         iconColor: 'text-purple-600',
+      },
+      {
+        name: 'WebSockets',
+        icon: SiSocketdotio,
+        description: 'Real-time communication',
+        iconColor: 'text-orange-500',
       },
     ],
   },
