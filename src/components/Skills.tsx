@@ -113,9 +113,9 @@ export default function Skills() {
   const ref = useRef(null);
 
   return (
-    <section id="skills" className="py-6 bg-white border-b border-[#E6E6E6]" ref={ref}>
+    <section id="skills" className="py-6 bg-[var(--card)] border-b border-[var(--border)]" ref={ref}>
       <div className="px-4">
-        <h2 className="text-2xl font-bold mb-6 text-black">
+        <h2 className="text-2xl font-bold mb-6 text-[var(--text)]">
           Skills
         </h2>
 
@@ -123,23 +123,23 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="bg-white border border-[#E6E6E6] rounded-2xl p-6"
+              className="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6"
             >
-              <h3 className="text-xl font-bold text-black mb-6 text-center">{category.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--text)] mb-6 text-center">{category.title}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill) => {
                   const Icon = skill.icon;
                   return (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-4 p-3 hover:bg-[#F7F9F9] rounded-lg transition-colors"
+                      className="flex items-center gap-4 p-3 hover:bg-[#F7F9F9] dark:hover:bg-[#111317] rounded-lg transition-colors"
                     >
-                      <div className="w-12 h-12 border border-[#E6E6E6] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 border border-[var(--border)] rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon size={24} className={skill.iconColor} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-base font-semibold text-black mb-1">{skill.name}</h4>
-                        <p className="text-xs text-black/60">{skill.description}</p>
+                        <h4 className="text-base font-semibold text-[var(--text)] mb-1">{skill.name}</h4>
+                        <p className="text-xs text-[var(--muted)]">{skill.description}</p>
                       </div>
                     </div>
                   );

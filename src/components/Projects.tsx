@@ -96,9 +96,9 @@ export default function Projects() {
   const ref = useRef(null);
 
   return (
-    <section id="projects" className="py-6 bg-white border-b border-[#E6E6E6]" ref={ref}>
+    <section id="projects" className="py-6 bg-[var(--card)] border-b border-[var(--border)]" ref={ref}>
       <div className="px-4">
-        <h2 className="text-2xl font-bold mb-6 text-black">
+        <h2 className="text-2xl font-bold mb-6 text-[var(--text)]">
           Projects
         </h2>
 
@@ -106,9 +106,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white border border-[#E6E6E6] rounded-2xl overflow-hidden flex flex-col hover:border-[#1DA1F2] transition-colors"
+              className="bg-[var(--card)] border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col hover:border-[var(--accent)] transition-colors"
             >
-              <div className="h-48 bg-gray-50 flex items-center justify-center overflow-hidden">
+              <div className="h-48 bg-gray-50 dark:bg-[#0f1114] flex items-center justify-center overflow-hidden">
                 {project.image && project.image !== 'placeholder' ? (
                   <img
                     src={project.image}
@@ -121,11 +121,11 @@ export default function Projects() {
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-black mb-3 hover:text-[#1DA1F2] transition-colors">
+                <h3 className="text-xl font-semibold text-[var(--text)] mb-3 hover:text-[var(--accent)] transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-black/70 mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
+                <p className="text-[var(--muted)] mb-4 flex-1 text-sm leading-relaxed">{project.description}</p>
 
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -145,7 +145,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-[#E6E6E6] text-black rounded-full hover:border-[#1DA1F2] hover:text-[#1DA1F2] transition-colors text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-[var(--border)] text-[var(--text)] rounded-full hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors text-sm"
                   >
                     <Github size={16} />
                     <span>GitHub</span>
@@ -155,7 +155,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#1DA1F2] text-white rounded-full hover:bg-[#1a8cd8] transition-colors text-sm"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[var(--accent)] text-white rounded-full hover:brightness-95 transition-colors text-sm"
                     >
                       <ExternalLink size={16} />
                       <span>Demo</span>
