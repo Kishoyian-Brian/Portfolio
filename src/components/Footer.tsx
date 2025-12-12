@@ -2,12 +2,12 @@ import { Github, Linkedin, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-white border-t border-[#E6E6E6] py-8">
+      <div className="max-w-4xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-gray-400">
+          <div className="flex items-center gap-2 text-black/60">
             <span>&copy; 2025 Brian. Built with</span>
-            <Heart size={16} className="text-red-500 fill-current" />
+            <Heart size={16} className="text-[#1DA1F2] fill-current" />
             <span>and React</span>
           </div>
 
@@ -16,7 +16,7 @@ export default function Footer() {
               href="https://github.com/Kishoyian-Brian"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-black/60 hover:text-[#1DA1F2] transition-colors"
               aria-label="GitHub"
             >
               <Github size={24} />
@@ -25,7 +25,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/brian-mwangi033/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              className="text-black/60 hover:text-[#1DA1F2] transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 text-center text-gray-500 text-sm">
+        <div className="mt-6 text-center text-black/40 text-sm">
           <p>Designed and developed with modern web technologies</p>
         </div>
       </div>

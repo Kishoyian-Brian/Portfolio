@@ -22,24 +22,24 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E6E6E6]">
+      <div className="max-w-4xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, '#home')}
-            className="text-2xl font-bold text-white"
+            className="text-xl font-bold text-black hover:text-[#1DA1F2] transition-colors"
           >
             Brian
           </a>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className="text-black hover:text-[#1DA1F2] transition-colors font-medium"
               >
                 {link.label}
               </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-white transition-colors"
+            className="md:hidden text-black hover:text-[#1DA1F2] transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -56,14 +56,14 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gray-800/95 backdrop-blur-sm border-t border-gray-700">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden bg-white border-t border-[#E6E6E6]">
+          <div className="px-4 py-2 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md transition-all duration-200"
+                className="block px-4 py-2 text-black hover:text-[#1DA1F2] hover:bg-[#F7F9F9] rounded-lg transition-colors"
               >
                 {link.label}
               </a>
