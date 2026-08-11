@@ -25,7 +25,7 @@ function App() {
               />
               <div className="min-w-0">
                 <p className="text-xl font-bold text-[var(--text)] truncate">Mwangi Brian</p>
-                <p className="text-sm text-[var(--muted)] truncate">Junior Software Developer</p>
+                <p className="text-sm text-[var(--muted)] truncate">Software Developer</p>
               </div>
             </div>
 

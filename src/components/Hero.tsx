@@ -21,7 +21,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-xl text-[var(--text)] font-medium">
-          Junior Software Developer
+          Software Developer
         </h2>
 
         <p className="text-base text-[var(--muted)] leading-relaxed">
